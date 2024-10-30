@@ -52,7 +52,7 @@ class LowerFragment : Fragment() {
     }
     private fun showResetDialog() {
         val builder = AlertDialog.Builder(requireContext())
-        builder.setTitle("Ganaste")
+        builder.setTitle("Ganaste Negro")
             .setMessage("¿Deseas resetear los contadores?")
             .setPositiveButton("Sí") { _, _ ->
                 viewModel.resetScores() // Resetear los contadores en el ViewModel
