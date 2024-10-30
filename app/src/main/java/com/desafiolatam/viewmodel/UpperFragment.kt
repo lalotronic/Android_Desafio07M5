@@ -30,9 +30,8 @@ class UpperFragment : Fragment() {
                 viewModel.decrementLower()
             }
             else {
-                // Opcional: Puedes deshabilitar el TextView o mostrar un mensaje
-                binding.tvUpperClick.isEnabled = false // Deshabilitar el clic
-                // También podrías mostrar un mensaje o un Toast aquí
+                // deshabilitamos el TextView y mostramos mensaje
+                binding.tvUpperClick.isEnabled = false // Deshabilitar el click
                 showResetDialog()
             }
         }
@@ -43,23 +42,24 @@ class UpperFragment : Fragment() {
             }
         }
         return binding.root
-    }
+    }//funcion que muestra mensaje
     private fun showResetDialog() {
         val builder = AlertDialog.Builder(requireContext())
         builder.setTitle("Ganaste Blanco")
             .setMessage("¿Deseas resetear los contadores?")
             .setPositiveButton("Sí") { _, _ ->
                 viewModel.resetScores() // Resetear los contadores en el ViewModel
-                binding.tvUpperClick.isEnabled = true // Rehabilitar el clic
+                binding.tvUpperClick.isEnabled = true // Rehabilita el clic
             }
             .setNegativeButton("No") { dialog, _ ->
-                dialog.dismiss() // Cerrar el diálogo
+                dialog.dismiss() // Cierra el diálogo
             }
 
         val dialog = builder.create()
+        dialog.setCancelable(false) // Hace que el diálogo no se pueda cerrar tocando fuera de él
         dialog.show()
 
-        // Cambiar colores de los botones
+        // Cambiamos colores de los botones
         dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(ContextCompat.getColor(requireContext(), android.R.color.holo_green_light))
         dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(ContextCompat.getColor(requireContext(), android.R.color.holo_red_light))
     }
