@@ -12,6 +12,6 @@ jugador.<br>
 ● Por lo tanto, el juego consiste en hacer clic lo más rápido posible sobre la sección de
 la pantalla que a cada jugador le corresponda, hasta sumar los 20 puntos requeridos.<br>
 
-<img src="https://github.com/lalotronic/Android_Desafio07M5/blob/main/imagen.png" alt="img" style="width: 70%/>
+<img src="https://github.com/lalotronic/Android_Desafio07M5/blob/main/imagen.png" alt="img" style="width: 70%";/>
 
 
