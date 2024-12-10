@@ -1,4 +1,4 @@
-# Android_Desafio07M5
+# Android_Desafio07M5....Duelo de clicks
 
 En esta ocasión desarrollaremos un minijuego el cual tiene reglas muy simples para quienes
 lo jueguen.<br><br>
